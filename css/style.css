@@ -68,15 +68,17 @@ p {
   align-items: center;
 }
 .logo {
-  color: var(--ocean);
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-right: 76px;
-  display: inline-block;
+  display: block;
+	text-align: center;
+	margin-bottom: 16px;
+	color: var(--iris);
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.17;
+	letter-spacing: 0.54px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .logo-next {
   color: var(--navyblue);
@@ -175,7 +177,7 @@ p {
 
 .section-our-team {
   background-color: var(--cloud);
-  padding: 120px 0 120px;
+  padding: 96px 0 96px;
 }
 
 .visually-hidden {
@@ -239,8 +241,9 @@ p {
 
 .team {
   display: flex;
-  gap: 24px;
-  margin-right: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 .team:last-child {
   margin-right: 0;
@@ -288,17 +291,26 @@ p {
   padding-bottom: 120px;
 }
 .name-list {
-  background-color: var(--white);
-  border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  width: 264px;
+	background-color: var(--white);
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+			0px 1px 1px rgba(46, 47, 66, 0.16),
+			0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .name-gallery:last-child {
   margin-right: 0;
 }
-
+.name-h {
+  color: var(--navyblue, #2E2F42);
+	text-align: center;
+	font-size: 36px;
+	line-height: 40px;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+	margin-bottom: 72px;
+}
 .title {
   padding: 32px 0 32px;
 }
@@ -386,14 +398,14 @@ p {
 }
 .footer {
   background: var(--navyblue);
-  padding: 100px 0 100px;
+  padding: 96px 0 96px;
 }
 .footer-paragrah {
   color: var(--cloud);
-  font-size: 16px;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.02em;
-  max-width: 264px;
+	font-size: 16px;
+	line-height: 1.17;
+	letter-spacing: 0.02em;
+	max-width: 268px;
 }
 .logo-studio {
   color: var(--cloud);
@@ -435,17 +447,16 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-social-media {
   display: flex;
-  align-items: baseline;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 72px;
 }
-.footer-logo-paragrah {
-  margin-right: 120px;
-}
-.paragrah-media {
-  margin-right: 80px;
-}
+
 /* portfolio */
 .portfolio-btn {
 }
@@ -895,7 +906,6 @@ input:checked + .user-privacy > .span-form {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   display: block;
-  
 }
 .mobile-item-studio {
   color: var(--ocean);
@@ -1085,6 +1095,14 @@ input:checked + .user-privacy > .span-form {
   .name-item {
     width: calc((100% - 24px) / 2);
   }
+  .team{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+  .name-list{
+    width: calc((100% - 24px) / 2);
+  }
   .customers {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1203,6 +1221,18 @@ input:checked + .user-privacy > .span-form {
     background: var(--cloud, #f4f4fd);
     margin-bottom: 8px;
   }
+  .section-our-team {
+    padding: 120px 0 120px;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-direction: row;
+  }
+  .name-list {
+    width: calc((100% - 72px) / 4);
+  }
   .customer-section {
     padding: 120px 0;
   }
@@ -1214,4 +1244,50 @@ input:checked + .user-privacy > .span-form {
   .customer-box {
     width: calc((100% - 120px) / 6);
   }
+  .footer {
+    padding: 100px 0 100px;
+}
+ .footer-social-media{
+  display: flex;
+  flex-direction: unset;
+  align-items: baseline;
+  justify-content: start;
+  gap: 0;
+}
+.footer-paragrah{
+  max-width: 264px;
+  height: 72px;
+}
+.logo{
+  text-align: left;
+}
+.footer-logo-paragrah{
+  margin-right: 120px;
+}
+.paragrah-media{
+  margin-right: 80px;
+}
+.footer-media{
+  text-align: left;
+}
+
+.subscribe{
+  width: unset;
+}
+.subscribe-title{
+  text-align: left;
+}
+.subscribe-form{
+  display: flex;
+  flex-direction: unset;
+  justify-content: unset;
+}
+.subscribe-label{
+  max-width: 264px;
+}
+.subscribe-input{
+  width: 264px;
+}
+
+
 }
