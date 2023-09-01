@@ -1209,8 +1209,9 @@ color: var(--navyblue);
 	}
 
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-	.section {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+	     screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .section {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7),
 				rgba(46, 47, 66, 0.7)),
 			url(../images/background/Dark-bg_tablet@2x.jpg);
@@ -1234,6 +1235,9 @@ color: var(--navyblue);
   .address-item {
     display: flex;
     gap: 40px;
+  }
+  .address-list{
+    font-size: 16px;
   }
   /* section-two */
   .name-paragrah {
@@ -1378,8 +1382,9 @@ color: var(--navyblue);
 }
 
 }
-@media screen and (min-width: 1158px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-	.section {
+@media screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+	      screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .section {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7),
 				rgba(46, 47, 66, 0.7)),
 			url(../images/background/people-office_desktop@2x.jpg);
